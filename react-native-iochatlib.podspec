@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "react-native-iochatlib"
+  s.name         = "IochatLib"
   s.version      = "0.0.1"
   s.summary      = "iochat share lib"
   s.requires_arc = true

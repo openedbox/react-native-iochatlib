@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.static_framework = true  
   s.dependency 'React'
   s.dependency 'WechatOpenSDK'
-  s.dependency 'MobileVLCKit', '~>3.3.0'
+  s.dependency 'MobileVLCKit', '3.3.2'
 end

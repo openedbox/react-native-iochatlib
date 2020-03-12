@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.homepage       = package['homepage']
   s.requires_arc = true
   s.source       = { :git => "https://github.com/openedbox/react-native-iochatlib.git" }
-  s.source_files = 'ios/IochatLib/*'
+  s.source_files = 'ios/IochatLib/*.{h,m}'
+  s.public_header_files = ['ios/IochatLib/*.h']
   s.platform     = :ios, "9.0"
   s.static_framework = true  
   s.dependency 'React'

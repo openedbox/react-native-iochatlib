@@ -1,8 +1,8 @@
 
 import VLCPlayer from './VLCPlayer';
 
-const ExportBox = {
+const ExportItems = {
   VLCPlayer
 }
 
-module.exports = ExportBox;
+module.exports = ExportItems;

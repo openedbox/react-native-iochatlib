@@ -1,8 +1,9 @@
 
-import VLCPlayer from './VLCPlayer';
+import VLCPlayerView from './VLCPlayerView';
+
 
 const ExportItems = {
-  VLCPlayer
+  VLCPlayerView
 }
 
 module.exports = ExportItems;

@@ -12,3 +12,7 @@ ios/build
 .settings/
 
 .gradle
+
+#idea
+*.im*
+.idea/

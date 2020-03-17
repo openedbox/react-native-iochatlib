@@ -30,5 +30,5 @@ allprojects {
 dependencies {
   api 'com.facebook.react:react-native:+'
   implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
-  implementation 'org.videolan:vlc-lib-android:+'
+  implementation 'com.yyl.vlc:vlc-android-sdk:3.0.10'
 }

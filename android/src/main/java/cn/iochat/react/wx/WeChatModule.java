@@ -1,4 +1,4 @@
-package cn.iochat.react;
+package cn.iochat.react.wx;
 
 import android.content.Context;
 import android.content.Intent;

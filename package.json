@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git@github.com:openedbox/react-native-iochatlib.git"
   },
+  "dependencies": {
+    "events": "1.0.1"
+  },
   "author": "openedbox",
   "license": "MIT",
   "homepage": "https://github.com/openedbox/react-native-iochatlib"

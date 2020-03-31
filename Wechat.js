@@ -164,7 +164,6 @@ const nativeSubscribeMessage = wrapApi(WeChat.subscribeMessage);
  * @return {Promise}
  */
 export function sendAuthRequest(scopes, state) {
-  console.warn('sendAuthRequest');
   return new Promise((resolve, reject) => {
     WeChat.sendAuthRequest(scopes, state, () => {});
     emitter.once('SendAuth.Resp', resp => {

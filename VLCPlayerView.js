@@ -43,7 +43,7 @@ const PlayerView = props => {
     vlcPlayer.current.seek(0);
   };
 
-  const [paused, setPaused] = useState(false);
+  const [paused, setPaused] = useState(props.paused||false);
 
   return (
     <VLCPlayer

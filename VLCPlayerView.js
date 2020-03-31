@@ -48,8 +48,8 @@ const PlayerView = props => {
   return (
     <VLCPlayer
       ref={vlcPlayer}
-      //   paused={this.state.paused}
-      //seek={this.state.seek}
+      paused={paused}
+      // seek={this.state.seek}
       style={[styles.video]}
       source={{ uri: props.uri }}
       videoAspectRatio={props.videoAspectRatio}

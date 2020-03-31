@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -43,8 +43,11 @@ const PlayerView = props => {
     vlcPlayer.current.seek(0);
   };
 
-  const [paused, setPaused] = useState(props.paused||false);
+  const [paused, setPaused] = useState(props.paused || false);
 
+  useEffect(() => {
+    props.autoplay && vlcPlayer.current.resume(true);
+  }, []);
   return (
     <VLCPlayer
       ref={vlcPlayer}

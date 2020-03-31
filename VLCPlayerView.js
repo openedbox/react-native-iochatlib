@@ -46,7 +46,9 @@ const PlayerView = props => {
   const [paused, setPaused] = useState(props.paused || false);
 
   useEffect(() => {
-    props.autoplay && vlcPlayer.current.resume(true);
+    if (!(props.autoplay || true)) {
+      vlcPlayer.current.resume(true);
+    }
   }, []);
   return (
     <VLCPlayer

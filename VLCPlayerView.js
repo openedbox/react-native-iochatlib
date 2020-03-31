@@ -9,7 +9,8 @@ import {
   StatusBar,
   BackHandler,
   Modal,
-  Platform
+  Platform,
+  DeviceEventEmitter
 } from "react-native";
 import VLCPlayer from "./VLCPlayer";
 
@@ -45,10 +46,21 @@ const PlayerView = props => {
 
   const [paused, setPaused] = useState(props.paused || false);
 
+  const _play = () => {
+    setPaused(false);
+  };
+
+  const _stop = () => {
+    setPaused(true);
+  };
+
   useEffect(() => {
-    if (!(props.autoplay || true)) {
-      vlcPlayer.current.resume(true);
-    }
+    DeviceEventEmitter.addListener("play", () => _play());
+    DeviceEventEmitter.addListener("stop", () => _stop());
+    return () => {
+      DeviceEventEmitter.removeListener("play");
+      DeviceEventEmitter.removeListener("stop");
+    };
   }, []);
   return (
     <VLCPlayer

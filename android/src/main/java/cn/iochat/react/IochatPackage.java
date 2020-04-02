@@ -21,6 +21,7 @@ public class IochatPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(new PickerViewModule(reactContext), new WeChatModule(reactContext));
     }
 
+    // Deprecated RN 0.47
     @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();

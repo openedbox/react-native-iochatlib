@@ -44,8 +44,8 @@ dependencies {
     api 'com.facebook.react:react-native:+'
     // implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
     api files('libs/libammsdk.jar')
-//    implementation 'com.yyl.vlc:vlc-android-sdk:3.0.10'
-    implementation 'org.videolan.android:libvlc-all:3.3.0-eap02'
+    implementation 'com.yyl.vlc:vlc-android-sdk:3.1.7'
+//    implementation 'org.videolan.android:libvlc-all:3.3.0-eap02'
     implementation 'com.umeng.umsdk:common:2.1.0'
     implementation 'com.umeng.umsdk:utdid:1.1.5.3'
     implementation 'com.umeng.umsdk:push:6.0.1'

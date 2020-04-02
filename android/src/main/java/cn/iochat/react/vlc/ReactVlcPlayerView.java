@@ -15,15 +15,12 @@ import android.widget.Toast;
 
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.vlc.lib.listener.util.VLCInstance;
 
-import org.videolan.libvlc.FactoryManager;
+import org.videolan.libvlc.IVLCVout;
 import org.videolan.libvlc.LibVLC;
-import org.videolan.libvlc.LibVLCFactory;
 import org.videolan.libvlc.Media;
 import org.videolan.libvlc.MediaPlayer;
-import org.videolan.libvlc.interfaces.ILibVLC;
-import org.videolan.libvlc.interfaces.ILibVLCFactory;
-import org.videolan.libvlc.interfaces.IVLCVout;
 
 @SuppressLint("ViewConstructor")
 class ReactVlcPlayerView extends SurfaceView implements
@@ -37,7 +34,7 @@ class ReactVlcPlayerView extends SurfaceView implements
 
     private Handler mainHandler;
 
-    private ILibVLC libvlc;
+    private LibVLC libvlc;
     private MediaPlayer mMediaPlayer = null;
     private int mVideoHeight = 0;
     private int mVideoWidth = 0;
@@ -204,8 +201,7 @@ class ReactVlcPlayerView extends SurfaceView implements
             // options.add("--rtsp-tcp");
             // options.add("-vv");
             // [bavv add end]
-//            libvlc =  VLCInstance.get(getContext());
-            ILibVLC libvlc = ((ILibVLCFactory) FactoryManager.getFactory(ILibVLCFactory.factoryId)).getFromContext(getContext());
+            libvlc =  VLCInstance.get(getContext());
             // Create media player
             mMediaPlayer = new MediaPlayer(libvlc);
             mMediaPlayer.setEventListener(mPlayerListener);

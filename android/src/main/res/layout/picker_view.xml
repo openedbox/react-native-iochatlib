@@ -42,12 +42,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <com.beefe.picker.view.PickerViewLinkage
+        <cn.iochat.react.picker.view.PickerViewLinkage
             android:id="@+id/pickerViewLinkage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.beefe.picker.view.PickerViewAlone
+        <cn.iochat.react.picker.view.PickerViewAlone
             android:id="@+id/pickerViewAlone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

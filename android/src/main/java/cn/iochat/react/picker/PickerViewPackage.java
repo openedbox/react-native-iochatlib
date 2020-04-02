@@ -1,4 +1,4 @@
-package cn.iochat.react;
+package cn.iochat.react.picker;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import cn.iochat.react.picker.PickerViewModule;
 
 
 public class PickerViewPackage implements ReactPackage {

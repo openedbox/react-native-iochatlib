@@ -1,40 +1,53 @@
 apply plugin: 'com.android.library'
 
 def safeExtGet(prop, fallback) {
-  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 
-android {
-  compileSdkVersion safeExtGet('compileSdkVersion', 23)
-  buildToolsVersion safeExtGet('buildToolsVersion', '23.0.1')
-
-  defaultConfig {
-    minSdkVersion safeExtGet('minSdkVersion', 16)
-    targetSdkVersion safeExtGet('targetSdkVersion', 22)
-    versionCode 1
-    versionName "0.0.1"
-    ndk {
-      abiFilters "armeabi-v7a", "x86"
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        jcenter()
+        google()
     }
-  }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
+}
+android {
+    compileSdkVersion safeExtGet('compileSdkVersion', 28)
+    buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
+
+    defaultConfig {
+        minSdkVersion safeExtGet('minSdkVersion', 16)
+        targetSdkVersion safeExtGet('targetSdkVersion', 22)
+        versionCode 1
+        versionName "0.0.1"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
 }
 
 allprojects {
-  repositories {
-    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-    jcenter()
-    maven { url 'https://dl.bintray.com/umsdk/release' }
-  }
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        jcenter()
+        google()
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
 }
 
 dependencies {
-  api 'com.facebook.react:react-native:+'
-  // implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
-  api files('libs/libammsdk.jar')
-  implementation 'com.yyl.vlc:vlc-android-sdk:3.0.10'
-  implementation 'com.umeng.umsdk:common:2.1.0'
-  implementation 'com.umeng.umsdk:utdid:1.1.5.3'
-  implementation 'com.umeng.umsdk:push:6.0.1'
-  implementation 'com.umeng.umsdk:analytics:8.0.0'
+    api 'com.facebook.react:react-native:+'
+    // implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    api files('libs/libammsdk.jar')
+//    implementation 'com.yyl.vlc:vlc-android-sdk:3.0.10'
+    implementation 'org.videolan.android:libvlc-all:3.3.0-eap02'
+    implementation 'com.umeng.umsdk:common:2.1.0'
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    implementation 'com.umeng.umsdk:push:6.0.1'
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
 }

@@ -31,6 +31,7 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 import java.util.ArrayList;
 
+import cn.iochat.react.R;
 import cn.iochat.react.picker.util.MIUIUtils;
 import cn.iochat.react.picker.view.OnSelectedListener;
 import cn.iochat.react.picker.view.PickerViewAlone;

@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReadableArray;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import cn.iochat.react.picker.R;
+import cn.iochat.react.R;
 
 /**
  * Created by <a href="https://github.com/shexiaoheng">heng</a> on 16/9/6.

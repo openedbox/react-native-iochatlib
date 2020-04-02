@@ -14,6 +14,8 @@ import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import cn.iochat.react.picker.R;
+
 /**
  * Created by <a href="https://github.com/shexiaoheng">heng</a> on 2016/09/01
  *

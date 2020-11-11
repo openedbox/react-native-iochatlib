@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
   s.dependency 'React'
   s.dependency 'WechatOpenSDK'
   s.dependency 'MobileVLCKit', '3.3.2'
-  s.dependency 'UMCCommon'
-  s.dependency 'UMCAnalytics'
-  s.dependency 'UMCPush'
-  s.dependency 'UMCSecurityPlugins'
+  # s.dependency 'UMCCommon'
+  # s.dependency 'UMCAnalytics'
+  # s.dependency 'UMCPush'
+  # s.dependency 'UMCSecurityPlugins'
 end
